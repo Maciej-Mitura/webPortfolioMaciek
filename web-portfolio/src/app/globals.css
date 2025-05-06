@@ -1,15 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-background: #f7faf8;
+  --color-text: #23272a;
+  --color-accentcolor: #27c46a;
+  --color-accenthover: #17643e;
+  --color-lightbackground: #e8f6ef;
+  --color-extradetails: #13202c;
+  --font-poppins: Poppins;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* [var(--color-background)]  */
+/* [var(--color-text)]  */
+/* [var(--color-accentcolor)] */
+/* [var(--color-accenthover)] */
+/* [var(--color-lightbackground)] */
+/* [var(--color-extradetails)]  */
+
+.dark {
+  --color-background: #181c1b;
+  --color-text: #f1f3f2;
+  --color-accentcolor: #27c46a;
+  --color-accenthover: #3be088;
+  --color-lightbackground: #22302d;
+  --color-extradetails: #b8c4bb;
+}
+
+/* styles/globals.css */
+.clip-diamond {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +39,7 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-poppins), sans-serif;
 }
