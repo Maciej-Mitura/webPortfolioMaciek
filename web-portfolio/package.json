@@ -12,11 +12,16 @@
     "@mdx-js/loader": "^3.1.0",
     "@next/mdx": "^15.3.1",
     "@tailwindcss/vite": "^4.1.5",
+    "developer-icons": "^5.3.7",
+    "devicon": "^2.16.0",
+    "framer-motion": "^12.10.0",
     "lucide-react": "^0.507.0",
     "next": "15.3.1",
     "next-themes": "^0.4.6",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-fast-marquee": "^1.6.5",
+    "react-vanilla-tilt": "^1.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

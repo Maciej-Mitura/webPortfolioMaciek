@@ -9,11 +9,6 @@ const poppins = Poppins({
   subsets: ["latin"],
 })
 
-export const metadata = {
-  title: "Maciej Mitura",
-  description: "Maciej Mitura's portfolio",
-}
-
 export default function RootLayout({
   children,
 }: {
@@ -21,10 +16,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${poppins.variable}`}>
-      <body>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body className="min-h-screen">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar /> {/* This renders the nav bar on every page */}
-          {children} {/* This renders the content of each page */}
+          <main className="flex min-h-[calc(100vh-90px)] flex-col">
+            {children} {/* This renders the content of each page */}
+          </main>
         </ThemeProvider>
       </body>
     </html>

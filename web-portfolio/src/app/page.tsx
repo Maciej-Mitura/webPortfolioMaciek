@@ -1,18 +1,20 @@
+"use client"
 import { ArrowDownToLine } from "lucide-react"
 import Image from "next/image"
 
 export default function About() {
   return (
-    <main className="font-poppins mr-[10%] ml-[10%] flex h-[calc(100vh-90px)] justify-center gap-40 overflow-auto bg-[var(--color-background)]">
-      <section className="flex w-1/2 flex-col items-start justify-center space-y-0">
-        <h2 className="m-0 p-0 text-[60px] font-bold text-[var(--color-text)]">
+    <main className="font-poppins mx-[5%] flex min-h-[calc(100vh-90px)] flex-col-reverse justify-center overflow-auto bg-[var(--color-background)] py-8 md:mx-[10%] lg:flex-row lg:gap-20 lg:py-0 xl:gap-40">
+      {/* Text section - will appear below the image on mobile/tablet */}
+      <section className="mb-8 flex w-full flex-col items-center justify-center space-y-0 lg:mb-0 lg:w-1/2 lg:items-start">
+        <h2 className="m-0 p-0 text-center text-[40px] font-bold text-[var(--color-text)] md:text-[50px] lg:text-left xl:text-[60px]">
           Hello, I&apos;m{" "}
           <span className="text-[var(--color-accentcolor)]">Maciej</span>
         </h2>
-        <h3 className="m-0 p-0 text-[30px] font-bold text-[var(--color-text)]">
+        <h3 className="m-0 p-0 text-center text-[20px] font-bold text-[var(--color-text)] md:text-[25px] lg:text-left xl:text-[30px]">
           Fullstack Web Developer
         </h3>
-        <p className="m-0 p-0 text-[20px] font-semibold text-[var(--color-text)]">
+        <p className="m-0 max-w-[90%] p-0 text-center text-[16px] font-semibold text-[var(--color-text)] md:text-[18px] lg:max-w-none lg:text-left xl:text-[20px]">
           I&apos;m a passionate coder & programmer, currently studying
           Multimedia & Creative Technologies (
           <a
@@ -28,23 +30,29 @@ export default function About() {
           impactful digital solutions.
         </p>
         <a
-          href="/resume.pdf" // Change this to the actual resume path
+          href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 ml-0.5 flex flex-row items-center gap-1 rounded-[4px] bg-[var(--color-text)] px-3 py-1.5 text-[32px] font-semibold text-[var(--color-background)]"
+          className="mt-4 flex flex-row items-center gap-1 rounded-[4px] bg-[var(--color-text)] px-3 py-1.5 text-[24px] font-semibold text-[var(--color-background)] md:text-[28px] xl:text-[32px]"
         >
-          <ArrowDownToLine strokeWidth={3} width={32} height={32} />
+          <ArrowDownToLine
+            strokeWidth={3}
+            width={24}
+            height={24}
+            className="md:h-[28px] md:w-[28px] xl:h-[32px] xl:w-[32px]"
+          />
           Resume
         </a>
       </section>
 
-      <section className="flex w-1/2 items-center justify-center">
+      {/* Image section - will appear above the text on mobile/tablet */}
+      <section className="mb-8 flex w-full items-center justify-center lg:mb-0 lg:w-1/2">
         <Image
           src="/assets/images/myProfPic.png"
           alt="Profile"
           width={512}
           height={512}
-          className="w-[100%]"
+          priority
         />
       </section>
     </main>
